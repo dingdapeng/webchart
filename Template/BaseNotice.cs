@@ -15,7 +15,7 @@ namespace Template
         //    "topcolor":"#FF0000",
         //    "data":{
         //            "first": {
-        //                "value":"恭喜你购买成功！",
+        //                "value":"恭喜你购买成功！",-----
         //                "color":"#173177"
         //            },
         //            "keynote1":{
