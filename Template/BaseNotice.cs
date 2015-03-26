@@ -39,9 +39,10 @@ namespace Template
 
 
 
-       public string touser;
+        private string touser;
 
-      
+       
+       public string Touser;
 
        public string url;
 
