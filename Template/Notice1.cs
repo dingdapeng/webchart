@@ -51,7 +51,7 @@ namespace Template
 
             StringBuilder sb = new StringBuilder();
             sb.Append("{");
-            sb.Append("\"touser\":\""+this.touser+"\",");
+            sb.Append("\"touser\":\""+this.Touser1+"\",");
             sb.Append("\"template_id\":\"" + this.template_id + "\",");
             sb.Append("\"url\":\"" + this.url + "\",");
             sb.Append("\"topcolor\":\"" + this.topcolor + "\",");
