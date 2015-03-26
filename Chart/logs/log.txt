@@ -1,0 +1,43 @@
+2222
+2222
+
+<xml>
+  <ToUserName>toUser</ToUserName>
+  <FromUserName>fromUser</FromUserName>
+  <CreateTime>1402035966</CreateTime>
+  <MsgType>transfer_customer_service</MsgType>
+</xml>
+
+<xml>
+  <ToUserName>toUser</ToUserName>
+  <FromUserName>fromUser</FromUserName>
+  <CreateTime>1402035966</CreateTime>
+  <MsgType>transfer_customer_service</MsgType>
+</xml>
+qrscene_1
+
+<xml>
+  <ToUserName>FromUser</ToUserName>
+  <FromUserName>toUser</FromUserName>
+  <CreateTime>1404902081</CreateTime>
+  <MsgType>text</MsgType>
+  <Content>二维码扫描测试未关注</Content>
+</xml>
+qrscene_1
+
+<xml>
+  <ToUserName>FromUser</ToUserName>
+  <FromUserName>toUser</FromUserName>
+  <CreateTime>1404902119</CreateTime>
+  <MsgType>text</MsgType>
+  <Content>二维码扫描测试未关注</Content>
+</xml>
+qrscene_1
+
+<xml>
+  <ToUserName>FromUser</ToUserName>
+  <FromUserName>toUser</FromUserName>
+  <CreateTime>1404902182</CreateTime>
+  <MsgType>text</MsgType>
+  <Content>二维码扫描测试未关注</Content>
+</xml>
