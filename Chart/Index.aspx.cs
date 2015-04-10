@@ -15,7 +15,7 @@ namespace Chart
     public partial class Index : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {       
+        {
             #region   处理请求
             if (Request.HttpMethod.ToUpper() == "GET")//GET
             {
@@ -96,19 +96,38 @@ namespace Chart
                     {   //qrscene_123123
                         if (requestHT["EventKey"].ToString().Contains("qrscene_"))//用户未关注情况下
                         {
+                            #region MyRegion
+
                             //List<ArticleEntity> lis = new List<ArticleEntity> { new ArticleEntity { Description = "感谢您关注极客美家服务号！极客美家是集设计、装修、建材、家居领域为一体，提供优质家装配套服务的云装修平台。点击屏幕下方功能按钮，您可以预约量房、查看装修工程进度，还可以申请装修贷款。云中之家，触手可得，极客美家与您一起开启新居工程。了解更多装修知识和优惠活动欢迎关注极客美家订阅号mj100pb。", Title = "极客美家", PicUrl = "http://img.mj100.com/weixin/img/jkmj-1.jpg", Url = "http://www.mj100.com/" } };
-                            List<ArticleEntity> lis = new List<ArticleEntity> { new ArticleEntity { Description = "极客美家推出698装修套餐活动，设计、施工、主材全包，施工零增项，无任何附加和隐蔽费用。使用十大一线品牌主料和欧洲标准辅材，施工过程中您可以随时随地获得施工现场的图文信息推送。另外您还可以通过美家易贷获得装修贷款。极客美家提供10年维保，保障装修质量。", Title = "活动详情", PicUrl = "http://img.mj100.com/weixin/ueditor/net/upload/image/20150317/6356219888539987504148743.jpg", Url = "http://img.mj100.com/weixin/ueditor/readhtml.aspx?key=48514002-dd7a-461e-9235-33fd6aa843b7" } };
-                            Response.Write(GetresponseNews(info, lis));
+
+                            //  List<ArticleEntity> lis = new List<ArticleEntity> { new ArticleEntity { Description = "极客美家推出698装修套餐活动，设计、施工、主材全包，施工零增项，无任何附加和隐蔽费用。使用十大一线品牌主料和欧洲标准辅材，施工过程中您可以随时随地获得施工现场的图文信息推送。另外您还可以通过美家易贷获得装修贷款。极客美家提供10年维保，保障装修质量。", Title = "活动详情", PicUrl = "http://img.mj100.com/weixin/ueditor/net/upload/image/20150317/6356219888539987504148743.jpg", Url = "http://img.mj100.com/weixin/ueditor/readhtml.aspx?key=48514002-dd7a-461e-9235-33fd6aa843b7" } };
+                            // Response.Write(GetresponseNews(info, lis)); 
+                            #endregion
+
+                            Response.Write(GetresponseText(info, @"感谢您关注极客美家服务号！极客美家是集设计、装修、建材、家居领域为一体，提供优质家装配套服务的云装修平台。点击屏幕下方功能按钮，您可以预约量房、查看装修工程进度，还可以申请装修贷款。
+【中铁建小区用户】请回复中铁建＋您的姓名+手机号  
+【参与美家计划698活动】请回复698+您的姓名+手机号+新居所在城市
+设计师会在第一时间与您取得联系"));
                             Response.End();
+
+
                         }
                         else
                         {
-                            List<ArticleEntity> lis = new List<ArticleEntity> { new ArticleEntity { Description = "极客美家推出698装修套餐活动，设计、施工、主材全包，施工零增项，无任何附加和隐蔽费用。使用十大一线品牌主料和欧洲标准辅材，施工过程中您可以随时随地获得施工现场的图文信息推送。另外您还可以通过美家易贷获得装修贷款。极客美家提供10年维保，保障装修质量。", Title = "活动详情", PicUrl = "http://img.mj100.com/weixin/ueditor/net/upload/image/20150317/6356219888539987504148743.jpg", Url = "http://img.mj100.com/weixin/ueditor/readhtml.aspx?key=48514002-dd7a-461e-9235-33fd6aa843b7" } };
-                            Response.Write(GetresponseNews(info, lis));
+                            #region MyRegion
+                            //  List<ArticleEntity> lis = new List<ArticleEntity> { new ArticleEntity { Description = "极客美家推出698装修套餐活动，设计、施工、主材全包，施工零增项，无任何附加和隐蔽费用。使用十大一线品牌主料和欧洲标准辅材，施工过程中您可以随时随地获得施工现场的图文信息推送。另外您还可以通过美家易贷获得装修贷款。极客美家提供10年维保，保障装修质量。", Title = "活动详情", PicUrl = "http://img.mj100.com/weixin/ueditor/net/upload/image/20150317/6356219888539987504148743.jpg", Url = "http://img.mj100.com/weixin/ueditor/readhtml.aspx?key=48514002-dd7a-461e-9235-33fd6aa843b7" } };
+                            // Response.Write(GetresponseNews(info, lis)); 
+                            #endregion
+
+
+                            Response.Write(GetresponseText(info, @"感谢您关注极客美家服务号！极客美家是集设计、装修、建材、家居领域为一体，提供优质家装配套服务的云装修平台。点击屏幕下方功能按钮，您可以预约量房、查看装修工程进度，还可以申请装修贷款。
+【中铁建小区用户】请回复中铁建＋您的姓名+手机号  
+【参与美家计划698活动】请回复698+您的姓名+手机号+新居所在城市
+设计师会在第一时间与您取得联系"));
                             Response.End();
-                           
+
                         }
-                         
+
                     }
                     // 取消订阅  
                     else if (eventType.ToLower() == ReqEventType.Unsubscribe)
@@ -347,7 +366,7 @@ namespace Chart
                     break;
                 case "xyx":
                     res = GetresponseText(info, "<a href='http://mobile.mj100.com/demo/demo1/se.htm'>1.看看我有多色</a>\n\n<a href='http://mobile.mj100.com/demo/demo1/0.htm'>2.看看我前世是什么</a>\n\n<a href='http://mobile.mj100.com/demo/demo1/2048.htm'>3.挑战2048</a>");
-                    break; 
+                    break;
                 #endregion
 
                 #region 按钮点击
@@ -382,10 +401,10 @@ A：我们是极客美家，是一家提供设计方案、建材选购、工程�
                     break;
 
                 case "cxyd":
-                  #region 查询易贷
+                    #region 查询易贷
                     List<ArticleEntity> lisyd = new List<ArticleEntity> { new ArticleEntity { Description = "极客美家联合各大银行推出家装贷款产品，额度高达50万、固定利率10.8%无任何手续费、还款周期长、最快两天放款，真正满足您的装修资金需求。回复工资流水单、社保证明及公积金证明的清晰照片即可申请家装贷款。为了您能快速申请到款项，请确保照片内容的真实性，您的个人信息仅作贷款申请使用，不会以任何形式泄露给其他人员和机构。", Title = "美家易贷", PicUrl = "http://img.mj100.com/weixin/img/yd.jpg", Url = "http://img.mj100.com/weixin/ueditor/readhtml.aspx?key=52f98347-6f86-42e1-8165-19b6c4ad4828" } };
-                    res = GetresponseNews(info, lisyd); 
-	#endregion
+                    res = GetresponseNews(info, lisyd);
+                    #endregion
                     break;
                 case "ydjsq":
                     res = GetresponseText(info, " <a href='http://img.mj100.com/weixin/minimj/jsq.aspx'>点击进入易贷计算器</a>");
@@ -393,7 +412,7 @@ A：我们是极客美家，是一家提供设计方案、建材选购、工程�
 
                 default:
                     res = GotoKefu(info);
-                    break; 
+                    break;
                 #endregion
             }
             return res;
@@ -407,32 +426,80 @@ A：我们是极客美家，是一家提供设计方案、建材选购、工程�
         /// <returns></returns>
         public string ResponseByText(string Text, BaseMessage info)
         {
+
+            //【中铁建小区用户】请回复中铁建＋您的姓名+手机号
+            //【参与美家计划698活动】请回复698+您的姓名+手机号
+            //设计师会在第一时间与您取得联系
+
+
             string res = "";
+
+            #region 易贷
             Regex ydre = new Regex("易贷\\d{11}");
             if (ydre.IsMatch(Text))
             {
-               res= GotoKefu(info);
-            }
+                res = GotoKefu(info);
+                return res;
+            } 
+            #endregion
 
             #region 预约的情况
+
+            Regex ztj = new Regex("中铁建(.*)(\\d{11})");
+            if (ztj.IsMatch(Text))
+            {
+                Match m = ztj.Match(Text);
+
+                bool addb = BLL.WebChartBll.AddUser(info.FromUserName, m.Groups[2].Value, m.Groups[1].Value, "中铁建");
+                if (addb)
+                {
+                    res = GetresponseText(info, "我们已收到您的量房申请，稍后会致电您预留的电话" + m.Groups[2].Value + "，与您确定量房时间和地点,请您保持电话畅通。");
+
+                    string s = WeixinServer.PostMa("https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=" + WeixinServer.Get_Access_token(), new Template.Notice4("o8r91jv006I_SCONLoJw6eACZEVM", "http://img.mj100.com/weixin/ueditor/userlist.aspx", "#FF0000", "Tony,你好,有一个中铁建的顾客预约量房，请注意安排时间", m.Groups[1].Value, m.Groups[2].Value, "中铁建上门量房", "上门量房时间待定，请及时联系中铁建客户", "无", "点击查看详情").ToString(), Encoding.UTF8);
+
+                    return res;
+                }
+            }
+
+            Regex ljb = new Regex("^698(.+)(\\d{11})(.+)?$");
+            if (ljb.IsMatch(Text) && !Text.Contains("易贷"))
+            {
+                Match m = ljb.Match(Text);
+
+                bool addb = BLL.WebChartBll.AddUser(info.FromUserName, m.Groups[2].Value, m.Groups[1].Value,"698活动："+ m.Groups[3].Value);
+                if (addb)
+                {
+                    res = GetresponseText(info, "我们已收到您的量房申请，稍后会致电您预留的电话" + m.Groups[2].Value + "，与您确定量房时间和地点,请您保持电话畅通。");
+
+                    string s = WeixinServer.PostMa("https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=" + WeixinServer.Get_Access_token(), new Template.Notice4("o8r91jv006I_SCONLoJw6eACZEVM", "http://img.mj100.com/weixin/ueditor/userlist.aspx", "#FF0000", "Tony,你好,有一个顾客预约量房，参与698活动，请注意安排时间", m.Groups[1].Value, m.Groups[2].Value, "698活动上门量房", "上门量房时间待定，请及时联系客户", "无", "点击查看详情").ToString(), Encoding.UTF8);
+
+                    return res;
+                }
+
+            }
+
+
             Regex reyy = new Regex(@"^(.+)(\d{11})(.+)?$", RegexOptions.Singleline);
-            if (reyy.IsMatch(Text)&&!Text.Contains("易贷"))
+            if (reyy.IsMatch(Text) && !Text.Contains("易贷"))
             {
                 Match m = reyy.Match(Text);
 
-              bool addb=  BLL.WebChartBll.AddUser(info.FromUserName, m.Groups[2].Value, m.Groups[1].Value,m.Groups[3].Value);
-              if (addb)
-              {
-                  res = GetresponseText(info, "我们已收到您的量房申请，稍后会致电您预留的电话" + m.Groups[2].Value + "，与您确定量房时间和地点,请您保持电话畅通。");
+                bool addb = BLL.WebChartBll.AddUser(info.FromUserName, m.Groups[2].Value, m.Groups[1].Value, m.Groups[3].Value);
+                if (addb)
+                {
+                    res = GetresponseText(info, "我们已收到您的量房申请，稍后会致电您预留的电话" + m.Groups[2].Value + "，与您确定量房时间和地点,请您保持电话畅通。");
 
-                  string s = WeixinServer.PostMa("https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=" + WeixinServer.Get_Access_token(), new Template.Notice4("o8r91jv006I_SCONLoJw6eACZEVM", "http://img.mj100.com/weixin/ueditor/userlist.aspx", "#FF0000", "Tony,你好,有一个顾客预约量房，请注意安排时间", m.Groups[1].Value, m.Groups[2].Value, "上门量房", "上门量房时间待定，请及时联系客户", "无", "点击查看详情").ToString(), Encoding.UTF8);
+                    string s = WeixinServer.PostMa("https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=" + WeixinServer.Get_Access_token(), new Template.Notice4("o8r91jv006I_SCONLoJw6eACZEVM", "http://img.mj100.com/weixin/ueditor/userlist.aspx", "#FF0000", "Tony,你好,有一个顾客预约量房，请注意安排时间", m.Groups[1].Value, m.Groups[2].Value, "上门量房", "上门量房时间待定，请及时联系客户", "无", "点击查看详情").ToString(), Encoding.UTF8);
 
-                  return res; 
-              }
-               
-            } 
-           
+                    return res;
+                }
+
+            }
+
             #endregion
+
+
+
             switch (Text)
             {
                 #region MyRegion
@@ -457,11 +524,11 @@ A：我们是极客美家，是一家提供设计方案、建材选购、工程�
 1月31日将进行热水器安装，2月1日将进行铝扣板安装。您家新居的漆作阶段将于2月1日完成。如有任何疑问，请语音/文字回复或联系您的小美管家（季建生先生，电话：13146109935）。 
 期待已久？小美马上上图~~", Title = "2015 01 30 您的漆作工程施工节点推送", PicUrl = "http://img.mj100.com/weixin/ueditor/net/upload/image/20150313/6356186523821237508619902.jpg", Url = "http://img.mj100.com/weixin/ueditor/readhtml.aspx?key=6e1066ff-21fc-4f35-83b2-76a597af6d68" } };
                     res = GetresponseNews(info, lishd);
-                   
-                    break; 
-                case"dingdapeng":
-                string s= WeixinServer.PostMa("https://api.weixin.qq.com/cgi-bin/message/template/send?access_token="+WeixinServer.Get_Access_token(), new Template.Notice1(info.FromUserName, "http://www.mj100.com", "#FF0000", "尊敬的用户，您好", "您的预约服务进度如下", "极客美家装修服务", "装修进度提醒", "这是一个测试信息").ToString(), Encoding.UTF8);
-                res = GetresponseText(info, s);
+
+                    break;
+                case "dingdapeng":
+                    string s = WeixinServer.PostMa("https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=" + WeixinServer.Get_Access_token(), new Template.Notice1(info.FromUserName, "http://www.mj100.com", "#FF0000", "尊敬的用户，您好", "您的预约服务进度如下", "极客美家装修服务", "装修进度提醒", "这是一个测试信息").ToString(), Encoding.UTF8);
+                    res = GetresponseText(info, s);
                     break;
                 case "易贷":
                     res = GetresponseText(info, @"Q：什么是美家易贷？
@@ -480,7 +547,7 @@ A：美家易贷是极客美家与多家银行强强联手为极客美家用户�
             return res;
         }
     }
- 
+
 
 
 }

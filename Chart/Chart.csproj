@@ -88,6 +88,7 @@
     <Content Include="minimj\test.html" />
     <Content Include="minimj\yzm.png" />
     <Content Include="QrCode.aspx" />
+    <Content Include="Senmdg2.aspx" />
     <Content Include="SenMsg.aspx" />
     <Content Include="test.aspx" />
     <Content Include="test.html" />
@@ -476,6 +477,13 @@
     <Compile Include="QrCode.aspx.designer.cs">
       <DependentUpon>QrCode.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Senmdg2.aspx.cs">
+      <DependentUpon>Senmdg2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Senmdg2.aspx.designer.cs">
+      <DependentUpon>Senmdg2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SenMsg.aspx.cs">
       <DependentUpon>SenMsg.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -594,24 +602,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{791e6df7-b073-4b13-8b2a-9e6c46d6041d}</Project>
-      <Name>BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Commen\Commen.csproj">
-      <Project>{010EA317-8414-4D3B-B786-847886F120CD}</Project>
-      <Name>Commen</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DbHelper\DbHelper.csproj">
-      <Project>{ff71680f-bc3f-491f-b957-809f2a8e4598}</Project>
-      <Name>DbHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Template\Template.csproj">
-      <Project>{b4e20518-0e09-4ce7-8a65-634b2bee4d73}</Project>
-      <Name>Template</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Properties\PublishProfiles\weixinfabu.pubxml" />
     <Content Include="SiteUrls.config">
       <SubType>Designer</SubType>
@@ -627,7 +617,24 @@
     <Content Include="ueditor\third-party\video-js\font\vjs.woff" />
     <Content Include="ueditor\save.ashx" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{791e6df7-b073-4b13-8b2a-9e6c46d6041d}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Commen\Commen.csproj">
+      <Project>{010ea317-8414-4d3b-b786-847886f120cd}</Project>
+      <Name>Commen</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DbHelper\DbHelper.csproj">
+      <Project>{ff71680f-bc3f-491f-b957-809f2a8e4598}</Project>
+      <Name>DbHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Template\Template.csproj">
+      <Project>{b4e20518-0e09-4ce7-8a65-634b2bee4d73}</Project>
+      <Name>Template</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
